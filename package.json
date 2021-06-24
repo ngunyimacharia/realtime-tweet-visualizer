@@ -8,9 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "autoprefixer": "^9",
     "cloudinary-vue": "^1.2.2",
     "core-js": "^3.6.5",
+    "postcss": "^7",
     "pusher-js": "^7.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11"
   },
   "devDependencies": {

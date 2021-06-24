@@ -3,6 +3,9 @@ import App from './App.vue'
 
 import "./plugins/cloudinary";
 
+import './main.css'
+
+
 Vue.config.productionTip = false
 
 new Vue({
