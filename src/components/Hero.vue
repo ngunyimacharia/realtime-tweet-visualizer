@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+  <div class="py-12 bg-gray-50 overflow-hidden">
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <div class="relative">
         <h2
@@ -15,7 +15,7 @@
         >
           Developer confrence tweets visualizer
         </h2>
-        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
+        <p class="my-16 max-w-3xl mx-auto text-center text-md text-gray-500">
           Diplaying tweets in the following hash-tags:
           <br />
           <b
