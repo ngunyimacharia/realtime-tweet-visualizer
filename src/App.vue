@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <Hero />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 import Pusher from "pusher-js";
 
-import HelloWorld from "./components/HelloWorld.vue";
+import Hero from "./components/Hero.vue";
 
 const PUSHER = new Pusher(process.env.VUE_APP_PUSHER_APP_KEY, {
   cluster: process.env.VUE_APP_PUSHER_CLUSTER,
@@ -22,7 +22,24 @@ export default {
   name: "App",
 
   components: {
-    HelloWorld,
+    Hero,
+  },
+
+  data() {
+    return {
+      tweets: [
+        {
+          username: "RobOttoBots",
+          text: "RT @Iamdataqueen: What is #NFT aka New Fashion Technology\nRelay Switch in Play Mode.\n#Artist \n#NFT #Copyright #Artlaw\n#Bigdata #MachineLear…",
+          full_name: "Rob Otto Bot",
+          tweet_url:
+            "https://twitter.com/1381744487358078979/status/1407903657279082496",
+          user_profile_image:
+            "http://pbs.twimg.com/profile_images/1381744739876175878/g88W9wp-_normal.jpg",
+          created_at: "Thu Jun 24 03:29:24 +0000 2021",
+        },
+      ],
+    };
   },
 
   mounted() {
