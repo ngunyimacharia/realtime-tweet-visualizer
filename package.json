@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "cloudinary-vue": "^1.2.2",
     "core-js": "^3.6.5",
     "pusher-js": "^7.0.3",
     "vue": "^2.6.11"
