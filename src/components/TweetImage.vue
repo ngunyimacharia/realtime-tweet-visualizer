@@ -2,7 +2,8 @@
   <cld-image
     publicId="realtime-tweet-visualizer/tweet_card_template_vazitc"
     secure="true"
-    class="p-5 mx-auto w-max"
+    class="p-5 mx-auto"
+    width="500"
   >
     <cld-transformation
       :overlay="`fetch:${tweet.user_profile_image}`"

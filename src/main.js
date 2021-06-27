@@ -5,9 +5,10 @@ import "./plugins/cloudinary";
 
 import './main.css'
 
-/* include animation styles */
-import "vodal/common.css";
-import "vodal/rotate.css";
+import VueFinalModal from 'vue-final-modal'
+
+Vue.use(VueFinalModal())
+
 
 Vue.config.productionTip = false
 

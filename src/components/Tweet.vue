@@ -1,19 +1,25 @@
 <template>
   <div>
-    <tweet-modal :tweet="tweet" :show="showTweet" @close="showTweet = false" />
-    <tweet-image :tweet="tweet" @click.native="showTweet = true" />
+    <vue-final-modal
+      classes="flex justify-center items-center"
+      content-class="w-full"
+      v-model="showModal"
+      @click-outside="showModal = false"
+      @closed="showModal = false"
+      @cancel="showModal = false"
+    >
+      <tweet-image :tweet="tweet" class="w-full" />
+    </vue-final-modal>
+    <tweet-image :tweet="tweet" @click.native="showModal = true" />
   </div>
 </template>
 
 <script>
 import TweetImage from "./TweetImage.vue";
 
-import TweetModal from "./TweetModal.vue";
-
 export default {
   components: {
     TweetImage,
-    TweetModal,
   },
   props: {
     tweet: {
@@ -23,7 +29,7 @@ export default {
   },
   data() {
     return {
-      showTweet: false,
+      showModal: false,
     };
   },
 };
