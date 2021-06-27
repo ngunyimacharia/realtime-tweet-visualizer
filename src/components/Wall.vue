@@ -10,7 +10,11 @@
       xl:gap-x-8
     "
   >
-    <li v-for="(tweet, index) in tweets" :key="index" class="relative">
+    <li
+      v-for="(tweet, index) in tweets.filter((tweet) => tweet.lang === 'en')"
+      :key="index"
+      class="relative"
+    >
       <div class="w-full h-full">
         <Tweet :tweet="tweet" />
       </div>
