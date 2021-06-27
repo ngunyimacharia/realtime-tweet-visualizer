@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Tweet from "./Wall/Tweet.vue";
+import Tweet from "./Tweet.vue";
 
 import Pusher from "pusher-js";
 

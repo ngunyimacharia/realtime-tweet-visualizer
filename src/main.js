@@ -5,6 +5,9 @@ import "./plugins/cloudinary";
 
 import './main.css'
 
+/* include animation styles */
+import "vodal/common.css";
+import "vodal/rotate.css";
 
 Vue.config.productionTip = false
 
