@@ -20,10 +20,7 @@
           Diplaying tweets in the following hash-tags:
         </p>
         <p class="p-4 max-w-3xl mx-auto text-center text-md text-gray-500">
-          <b>
-            #javascript, #js, #python, #java, #php, #rubyonrails, #typescript,
-            #dart, #flutter, #cloudinary
-          </b>
+          <b>#cloudinary, #mde </b>
         </p>
       </div>
     </div>
