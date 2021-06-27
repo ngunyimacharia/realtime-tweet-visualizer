@@ -1,8 +1,5 @@
 <template>
   <div>
-    {{ tweet }}
-
-    https://res.cloudinary.com/kmashytski/image/upload/v1624598278/realtime-tweet-visualizer/tweet_card_template_vazitc.webp
     <cld-image
       publicId="realtime-tweet-visualizer/tweet_card_template_vazitc"
       secure="true"
@@ -35,24 +32,6 @@
         y="95"
         x="-170"
       />
-      <!-- <cld-transformation
-        width="150"
-        height="150"
-        gravity="face"
-        crop="thumb"
-      />
-      <cld-transformation radius="20" />
-      <cld-transformation effect="sepia" />
-      <cld-transformation
-        :overlay="cloudinary_icon_blue"
-        gravity="south_east"
-        x="5"
-        y="5"
-        width="50"
-        opacity="60"
-        effect="brightness:200"
-      />
-      <cld-transformation angle="10" /> -->
     </cld-image>
   </div>
 </template>
