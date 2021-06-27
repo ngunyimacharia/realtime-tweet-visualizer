@@ -2,8 +2,8 @@
   <cld-image
     publicId="realtime-tweet-visualizer/tweet_card_template_vazitc"
     secure="true"
-    class="p-5 mx-auto"
     width="500"
+    :alt="`${tweet.username}'s tweet`"
   >
     <cld-transformation
       :overlay="`fetch:${tweet.user_profile_image}`"
@@ -12,19 +12,24 @@
       r="max"
     />
     <cld-transformation
-      :overlay="`text:arial_16_bold:${tweet.full_name},co_rgb:34383d`"
+      :overlay="`text:arial_16_bold:${encodeURIComponent(
+        safeText(tweet.full_name)
+      )},co_rgb:34383d`"
       y="-85"
       x="-176"
     />
     <cld-transformation
-      :overlay="`text:arial_16_thin:@${tweet.username},co_rgb:536471`"
+      :overlay="`text:arial_16_thin:@${encodeURIComponent(
+        safeText(tweet.username)
+      )},co_rgb:536471`"
       y="-60"
       x="-176"
     />
     <cld-transformation
       :overlay="`text:arial_16_thin:@${encodeURIComponent(
-        tweet.text.substring(0, 300)
+        safeText(tweet.text.substring(0, 300))
       )},co_rgb:0f1419`"
+      crop="fit"
       y="10"
     />
     <cld-transformation
@@ -52,13 +57,17 @@ export default {
         .replace(/\+/g, "-")
         .replace(/\//g, "_");
 
-      console.log(url);
-
-      var trimmed = trim(url, "=");
-
-      console.log(trimmed);
+      let trimmed = trim(url, "=");
 
       return trimmed;
+    },
+  },
+  methods: {
+    safeText(str) {
+      return new String(str)
+        .replace(/(?:https?|ftp):\/\/[\n\S]+/g, "URL")
+        .replace(/[^ A-Za-z0-9_@.#&+-]/gi, "")
+        .replace(/.{70}/g, "$&\n");
     },
   },
 };
