@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full h-full px-4 py-8">
     <vue-final-modal
       classes="flex justify-center items-center"
       content-class="w-full"
@@ -10,7 +10,11 @@
     >
       <tweet-image :tweet="tweet" class="w-full" />
     </vue-final-modal>
-    <tweet-image :tweet="tweet" @click.native="showModal = true" />
+    <tweet-image
+      class="w-full h-full"
+      :tweet="tweet"
+      @click.native="showModal = true"
+    />
   </div>
 </template>
 
