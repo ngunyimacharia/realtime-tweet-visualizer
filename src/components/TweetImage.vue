@@ -41,18 +41,11 @@
 </template>
 
 <script>
-import trim from "trim-character";
-
 export default {
   props: {
     tweet: {
       required: true,
       type: Object,
-    },
-  },
-  computed: {
-    profileBase64() {
-      return window.btoa(this.tweet.user_profile_image).trim(url, "=");
     },
   },
   methods: {
