@@ -52,14 +52,7 @@ export default {
   },
   computed: {
     profileBase64() {
-      let url = window
-        .btoa(this.tweet.user_profile_image)
-        .replace(/\+/g, "-")
-        .replace(/\//g, "_");
-
-      let trimmed = trim(url, "=");
-
-      return trimmed;
+      return window.btoa(this.tweet.user_profile_image).trim(url, "=");
     },
   },
   methods: {
